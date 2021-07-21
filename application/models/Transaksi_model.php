@@ -73,6 +73,12 @@ class Transaksi_model extends CI_Model
         return $query;
     }
 
+    public function showGrafik($bulan)
+    {
+        $query = $this->db->get_where('v_grafik_transaksi' , array("DATE_FORMAT(tgl_transaksi, '%m') = " => $bulan));
+        return $query;
+    }
+
     public function showBarangKeluar()
     {
         $query = $this->db->get_where('v_transaksi_keluar' , array('transaksi_status' => '1'));

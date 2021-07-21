@@ -23,6 +23,13 @@ class Calendar_model extends CI_Model
         return $tgl;
     }
 
+    public function indodate3()
+    {
+        date_default_timezone_set('Asia/Jakarta');
+        $tgl = date("M Y");
+        return $tgl;
+    }
+
     public function indoyear()
     {
         date_default_timezone_set('Asia/Jakarta');

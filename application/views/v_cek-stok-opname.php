@@ -150,22 +150,4 @@
         console.error(e);
       });
 
-function ucwords(str) {
-    return (str + '').replace(/^([a-z])|\s+([a-z])/g, function ($1) {
-        return $1.toUpperCase();
-    });
-}
-
-function kondisiBarang(str){
-  var kondisi;
-  if(str == 'b'){
-    kondisi = 'Baik';
-  }else if(str == 'r'){
-    kondisi = 'Rusak';
-  }else if(str == 'h'){
-    kondisi = 'Hilang';
-  }
-  return kondisi;
-}
-
 </script>

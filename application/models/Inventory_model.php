@@ -21,6 +21,14 @@ class Inventory_model extends CI_Model
         return $query;
     }
 
+    public function minInventory()
+    { 
+        $this->db->where('stok <=', '10');
+        // $this->db->limit(5);
+        $query = $this->db->get('v_inventory');
+        return $query;
+    }
+
     public function showLogistik()
     { 
         $query = $this->db->get('barang_logistik');     

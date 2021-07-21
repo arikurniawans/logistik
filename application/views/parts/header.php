@@ -31,6 +31,8 @@
   <!-- Scan QR Code -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  <!-- Grafik -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/9.1.2/highcharts.js" integrity="sha512-prZV5wNX5I3fC7LuHbGSVaZdkGSaGozWsk6GjjDqulbi3kcummKxIiR7O5lFh2ec/M0AxlHC8zokmLco+SfD/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
 </head>
 <body class="hold-transition skin-green sidebar-mini">
