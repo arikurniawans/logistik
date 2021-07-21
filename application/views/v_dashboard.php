@@ -154,8 +154,6 @@
                         this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 2) +' % ';
                     }
                  },
-                 
-                
                  plotOptions: {
                     pie: {
                         allowPointSelect: true,
@@ -166,12 +164,11 @@
                             connectorColor: 'green',
                             formatter: function() 
                             {
-                                return '<b>' + this.point.name + '</b>: ' + Highcharts.numberFormat(this.percentage, 2) +' % ';
+                                return '<b>' + this.point.name + '</b>: ' + this.point.y +' Item';
                             }
                         }
                     }
                  },
-       
                     series: [{
                     type: 'pie',
                     name: 'Jenis Transaksi',
@@ -181,9 +178,9 @@
                                 '<?php echo "Barang ".ucwords($dta->jenis_transaksi); ?>', <?php echo $dta->jml_trans; ?>
                             ],
                             <?php } ?>
-             
                     ]
                 }]
               });
         }); 
+        // Highcharts.numberFormat(this.point.y, 2)
     </script>
