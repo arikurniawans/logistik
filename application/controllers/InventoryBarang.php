@@ -24,6 +24,7 @@ class InventoryBarang extends CI_Controller {
         $data['jenis'] = $this->Jenis_model->showJenis()->result();
         $data['satuan'] = $this->Satuan_model->showSatuan()->result();
         $data['inventory'] = $this->Inventory_model->showInventory()->result();
+        $data['autonumber'] = $this->Inventory_model->generate_kode(); 
 
 		$this->load->view('parts/header');
         $this->load->view('parts/sidebar');

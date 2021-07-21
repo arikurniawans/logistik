@@ -75,7 +75,7 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Kode Barang</label>
                                     <input type="hidden" name="id" value="<?php echo $data->id_barang; ?>"/>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" name="kode_barang" value="<?php echo $data->kode_barang; ?>" required placeholder="Ketikan kode barang">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="kode_barang" readonly value="<?php echo $data->kode_barang; ?>" required placeholder="Ketikan kode barang">
                                 </div>
 
                                 <div class="form-group">
@@ -165,7 +165,7 @@
               <div class="modal-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Kode Barang</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" name="kode_barang" required placeholder="Ketikan kode barang">
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="kode_barang" readonly value="<?php echo $autonumber; ?>">
                 </div>
 
                 <div class="form-group">
