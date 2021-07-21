@@ -25,8 +25,12 @@ class Laporan extends CI_Controller {
             $tgl1 = $this->input->post('tgl1');
             $tgl2 = $this->input->post('tgl2');
 
-            $data['barang'] = $this->Transaksi_model->showFilterKeluar($tgl1, $tgl2)->result();
-
+            if($tgl1 == "" AND $tgl2 == ""){
+                $data['barang'] = $this->Transaksi_model->showBarangKeluar()->result();
+            }else{
+                $data['barang'] = $this->Transaksi_model->showFilterKeluar($tgl1, $tgl2)->result();
+            }
+            
             $this->load->view('parts/header');
             $this->load->view('parts/sidebar');
             $this->load->view('v_laporan-keluar', $data);
@@ -49,8 +53,12 @@ class Laporan extends CI_Controller {
             $tgl1 = $this->input->post('tgl1');
             $tgl2 = $this->input->post('tgl2');
 
-            $data['barang'] = $this->Transaksi_model->showFilterMasuk($tgl1, $tgl2)->result();
-
+            if($tgl1 == "" AND $tgl2 == ""){
+                $data['barang'] = $this->Transaksi_model->showBarangMasuk('2')->result();
+            }else{
+                $data['barang'] = $this->Transaksi_model->showFilterMasuk($tgl1, $tgl2)->result();
+            }
+            
             $this->load->view('parts/header');
             $this->load->view('parts/sidebar');
             $this->load->view('v_laporan-masuk', $data);

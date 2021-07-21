@@ -56,12 +56,12 @@
     //Date picker
     $('#datepicker1').datepicker({
       autoclose: true,
-      dateFormat: 'yyyy-mm-dd'
+      format: 'yyyy-mm-dd'
     })
     //Date picker
     $('#datepicker2').datepicker({
       autoclose: true,
-      dateFormat: 'yyyy-mm-dd'
+      format: 'yyyy-mm-dd'
     })
     
     $('#example1').DataTable()
