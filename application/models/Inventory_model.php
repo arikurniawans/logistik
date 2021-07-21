@@ -31,6 +31,7 @@ class Inventory_model extends CI_Model
 
     public function showLogistik()
     { 
+        $this->db->where_not_in('stok', '0');
         $query = $this->db->get('barang_logistik');     
         return $query;
     }

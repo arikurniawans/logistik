@@ -78,7 +78,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Ubah Password</a>
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#modal-ubahpass" class="btn btn-default btn-flat">Ubah Password</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?php echo base_url(); ?>auth/signout" class="btn btn-default btn-flat">Sign out</a>
@@ -90,3 +90,32 @@
       </div>
     </nav>
   </header>
+
+  <div class="modal fade" id="modal-ubahpass">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          <form action="<?php echo base_url(); ?>auth/changepass" method="post">
+            <div class="modal-header" style="background-color: #00a65a; color: white;">
+              <h4 class="modal-title">Ubah Password</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Password Baru</label>
+                    <input type="hidden" name="id" value="<?php echo $this->session->userdata('id'); ?>"/>
+                    <input type="text" class="form-control" id="exampleInputEmail1" required name="password" placeholder="Ketikan password baru">
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-flat btn-default" data-dismiss="modal">Batal</button>
+              <button type="submit" class="btn btn-flat btn-success">Simpan Perubahan Data</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+          </form>
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
