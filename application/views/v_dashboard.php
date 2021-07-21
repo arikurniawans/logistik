@@ -151,7 +151,7 @@
                  tooltip: {
                     formatter: function() {
                         return '<b>'+
-                        this.point.name +'</b>: '+ Highcharts.numberFormat(this.percentage, 2) +' % ';
+                        this.point.name +'</b>: '+ this.point.y +' Item';
                     }
                  },
                  plotOptions: {
